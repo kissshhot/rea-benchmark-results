@@ -1,10 +1,23 @@
-# Publish only the reviewed result artifacts and documentation.
+# Only reviewed result documents and figures are published.
 /*
 !/.gitignore
+!/.gitattributes
 !/README.md
-!/task-scores.csv
 !/summary.json
+!/task-scores.csv
 !/comparison.png
+!/comparison.html
 !/docs/
 /docs/*
 !/docs/task-construction-and-examples.md
+!/reports/
+/reports/*
+!/reports/tech-report-zh.pdf
+!/reports/tech-report-en.pdf
+!/reports/tech-report-zh.html
+!/reports/tech-report-en.html
+!/reports/captions.json
+!/reports/figures/
+/reports/figures/*
+!/reports/figures/comparison.png
+!/reports/figures/comparison.svg
