@@ -204,7 +204,7 @@
     "Template-based inputs; library names disclosed, training contamination cannot be excluded.",
     "REA evidence and explicit workflow guidance are not causally separated.",
     "Execution failures and incomplete outputs materially affect primary scores.",
-    "Test code, fixtures, candidate code and raw traces are not included; independent end-to-end reproduction is not yet possible.",
+    "Test code, the full test corpus, hidden fixtures, candidate code and raw traces are not included; six model-visible examples are documented. Independent end-to-end reproduction is not yet possible.",
     "Earlier debugging and optional-tool pilots are excluded, not pooled with this cohort."
   ]
 }

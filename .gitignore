@@ -1,7 +1,10 @@
-# Publish only the reviewed result artifacts.
+# Publish only the reviewed result artifacts and documentation.
 /*
 !/.gitignore
 !/README.md
 !/task-scores.csv
 !/summary.json
 !/comparison.png
+!/docs/
+/docs/*
+!/docs/task-construction-and-examples.md
