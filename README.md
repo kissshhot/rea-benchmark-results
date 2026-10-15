@@ -4,7 +4,7 @@
 
 6 个开源 JS 库、12 个功能任务、3 组对照，每任务每组生成一次，共 36 次有效运行。C 相对 B 的软件宏平均通过率高 **30.83 个百分点**；这是描述性先导结果，尚不能证明稳定或可单独归因于 REA 的增益。
 
-**技术报告：** [中文 PDF](reports/tech-report-zh.pdf) · [English PDF](reports/tech-report-en.pdf) · [中文 HTML](reports/tech-report-zh.html) · [English HTML](reports/tech-report-en.html)
+**技术报告 v1.1（中英文各 9 页）：** [中文 PDF](reports/tech-report-zh.pdf) · [English PDF](reports/tech-report-en.pdf) · [中文 HTML](reports/tech-report-zh.html) · [English HTML](reports/tech-report-en.html)
 
 | 设置 | 代表含义 | 宏平均通过率 | 严格成功 |
 |---|---|---:|---:|
@@ -23,9 +23,10 @@
 图由 [pyecharts](https://github.com/pyecharts/pyecharts) 2.1.0 重绘：[交互 HTML](comparison.html) · [PNG](comparison.png) · [SVG](reports/figures/comparison.svg)。两版报告均嵌入同一张图并附各自语言的完整 caption。HTML 下载后可在浏览器打开；交互图需联网加载 ECharts 5.6.0，报告 HTML 的静态图已内嵌。
 
 - [任务构建过程与 6 个实际用例](docs/task-construction-and-examples.md)：任务来源、接口、实验设置、判分与输入输出。
+- [三组实际输入 prompt](docs/experimental-prompts.md)：共同 system 消息、同一任务的 A/B/C 输入、工具权限和动态预算提醒；报告附录 B 同步收录。
 - [task-scores.csv](task-scores.csv)：36 次运行的冻结成绩、失败计数与用量；百分比单位。
 - [summary.json](summary.json)：设置、聚合成绩与敏感性检查；通过率为 0–1 小数。
 
 结果受共享模板、单次生成、执行失败和流程引导影响；12 次 REA 查询均未展开关系边。服务返回模型标识为 `deepseek-flash`，无法独立确认内部权重快照。
 
-仅公开结果、报告、图表和 6 条已有示例；测试代码、隐藏用例及完整测试集、候选实现和原始轨迹仍不公开。
+仅公开结果、报告、图表、提示词摘录和 6 条已有示例；测试代码、隐藏用例及完整测试集、候选实现和原始轨迹仍不公开。
