@@ -1,0 +1,210 @@
+{
+  "study": "REA functional reconstruction pilot",
+  "evaluation_date": "2026-10-15",
+  "frozen_protocol_version": "0.2.0",
+  "rea_package_version": "6.4.0",
+  "requested_model": "deepseek-v4-flash",
+  "returned_model_id": "deepseek-flash",
+  "model_weight_snapshot_verified": false,
+  "design": {
+    "tasks": 12,
+    "software_libraries": 6,
+    "arms": 3,
+    "independent_generations_per_task_arm": 1,
+    "completed_runs": 36,
+    "public_examples_per_task": 10,
+    "hidden_cases_per_task": 200,
+    "families_per_task": 5,
+    "hidden_cases_per_family": 40,
+    "unique_inputs_total": 2520,
+    "reference_outputs": "Fixed-version original npm packages",
+    "public_hidden_exact_input_overlap": false,
+    "public_hidden_share_templates": true
+  },
+  "arms": {
+    "A": "Behavior queries plus common task contract and public examples",
+    "B": "A plus minified target, readable source rendering, search, and basic AST function index; source inspection required",
+    "C": "B plus REA; analysis and semantic property tracing explicitly required"
+  },
+  "budget_per_run": {
+    "max_model_responses": 20,
+    "max_completion_tokens_per_response": 6144,
+    "max_completion_tokens_total": 24000,
+    "max_reference_queries": 80,
+    "workflow_deadline_seconds": 600,
+    "deadline_rule": "No new requests after deadline; in-flight request may finish",
+    "temperature": 0.2,
+    "thinking": "disabled"
+  },
+  "scoring": {
+    "rate_unit": "fraction from 0 to 1",
+    "aggregation": "Equal-weight family means, then tasks within software, then software libraries",
+    "exact_fields": "JSON structure, strings, booleans, array order",
+    "numeric_atol": 1e-07,
+    "numeric_rtol": 1e-06,
+    "strict_success_overall_min": 0.95,
+    "strict_success_each_family_min": 0.9,
+    "execution_batch_size": 20,
+    "batch_failure_rule": "A nonzero exit or wrong output count fails all 20 cases in that batch"
+  },
+  "primary": {
+    "macro_pass_rates": {
+      "A": 0.5379166666666667,
+      "B": 0.47500000000000003,
+      "C": 0.7833333333333333
+    },
+    "strict_success_counts": {
+      "A": 2,
+      "B": 4,
+      "C": 6
+    },
+    "task_scores": {
+      "P01": {
+        "A": 0.97,
+        "B": 0.0,
+        "C": 0.8
+      },
+      "P02": {
+        "A": 0.5900000000000001,
+        "B": 1.0,
+        "C": 1.0
+      },
+      "P03": {
+        "A": 0.015,
+        "B": 0.9949999999999999,
+        "C": 1.0
+      },
+      "P04": {
+        "A": 0.0,
+        "B": 0.005,
+        "C": 1.0
+      },
+      "P05": {
+        "A": 0.655,
+        "B": 0.0,
+        "C": 0.4
+      },
+      "P06": {
+        "A": 0.2,
+        "B": 0.0,
+        "C": 0.9400000000000001
+      },
+      "P07": {
+        "A": 0.2,
+        "B": 1.0,
+        "C": 1.0
+      },
+      "P08": {
+        "A": 0.0,
+        "B": 0.6,
+        "C": 0.4
+      },
+      "P09": {
+        "A": 1.0,
+        "B": 1.0,
+        "C": 1.0
+      },
+      "P10": {
+        "A": 1.0,
+        "B": 0.8800000000000001,
+        "C": 0.8800000000000001
+      },
+      "P11": {
+        "A": 0.93,
+        "B": 0.0,
+        "C": 0.9800000000000001
+      },
+      "P12": {
+        "A": 0.8949999999999999,
+        "B": 0.22000000000000003,
+        "C": 0.0
+      }
+    },
+    "software_scores": {
+      "diff-match-patch": {
+        "A": 0.1,
+        "B": 0.8,
+        "C": 0.7
+      },
+      "Fuse.js": {
+        "A": 0.0075,
+        "B": 0.49999999999999994,
+        "C": 1.0
+      },
+      "marked": {
+        "A": 0.4275,
+        "B": 0.0,
+        "C": 0.67
+      },
+      "minimatch": {
+        "A": 0.9125,
+        "B": 0.11000000000000001,
+        "C": 0.49000000000000005
+      },
+      "PapaParse": {
+        "A": 0.78,
+        "B": 0.5,
+        "C": 0.9
+      },
+      "semver": {
+        "A": 1.0,
+        "B": 0.9400000000000001,
+        "C": 0.9400000000000001
+      }
+    },
+    "C_minus_B_percentage_points": 30.83333333
+  },
+  "posthoc_sensitivity": {
+    "reason": "P12-C normal list.__len__() was incorrectly rejected by validator",
+    "changed_task": "P12",
+    "changed_arm": "C",
+    "model_calls": 0,
+    "candidate_bytes_unchanged": true,
+    "inputs_and_execution_limits_unchanged": true,
+    "only_change": "Allow __len__ in validator",
+    "passed": 200,
+    "total": 200,
+    "C_macro_pass_rate": 0.8666666666666667,
+    "C_minus_B_percentage_points": 39.16666667,
+    "C_strict_success_count": 7,
+    "replaces_primary": false,
+    "is_independent_model_repeat": false,
+    "candidate_sha256": "e9b12451c16254e3afdc0d92b5e20bc1fea2a3e5ca2a7befc498c75da9dd1474"
+  },
+  "actual_REA_usage": {
+    "analysis_calls": 12,
+    "semantic_trace_calls": 12,
+    "schema_reads": 9,
+    "traces_with_seed_nodes": 10,
+    "traces_with_expanded_relation_edges": 0
+  },
+  "usage_by_arm": {
+    "A": {
+      "input_tokens": 2435722,
+      "output_tokens": 176800,
+      "cached_input_tokens": 2319104,
+      "mean_workflow_seconds": 153.3267
+    },
+    "B": {
+      "input_tokens": 5005532,
+      "output_tokens": 130088,
+      "cached_input_tokens": 4691456,
+      "mean_workflow_seconds": 168.3532
+    },
+    "C": {
+      "input_tokens": 6080212,
+      "output_tokens": 127283,
+      "cached_input_tokens": 5725824,
+      "mean_workflow_seconds": 179.852
+    }
+  },
+  "dataset_sha256": "940880c7d203d016c0355919e8939332298e4c86c6065182ba29c7437ac9b238",
+  "limitations": [
+    "Six selected JS libraries and one generation per task/arm; no significance or stability claim.",
+    "Template-based inputs; library names disclosed, training contamination cannot be excluded.",
+    "REA evidence and explicit workflow guidance are not causally separated.",
+    "Execution failures and incomplete outputs materially affect primary scores.",
+    "Test code, fixtures, candidate code and raw traces are not included; independent end-to-end reproduction is not yet possible.",
+    "Earlier debugging and optional-tool pilots are excluded, not pooled with this cohort."
+  ]
+}

@@ -1,0 +1,7 @@
+# Publish only the reviewed result artifacts.
+/*
+!/.gitignore
+!/README.md
+!/task-scores.csv
+!/summary.json
+!/comparison.png
