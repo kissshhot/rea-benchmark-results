@@ -1,5 +1,7 @@
 # REA 功能重建 benchmark
 
+**简体中文** · [English](README.en.md)
+
 当前版本：**v5 · 20 个原创种子 · 5 种发布形式 · 60 次模型运行**。请求模型 `deepseek-v4-flash`，服务返回 `deepseek-flash`；REA 6.4.0。目标是从发布工件恢复指定功能的可观察行为。
 
 ## Pipeline
