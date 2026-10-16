@@ -1,0 +1,9 @@
+{
+  "dataset_freeze_sha256": "e6e7e9b280372039cb5d238701ed401f19a227825f6aeee515a2147c1b151fc4",
+  "frozen_file_count": 791,
+  "source_result_csv_sha256": "0b6eed02c2fef61f92e59559413405f8b253a08c25391ba893d6e6b09461f77c",
+  "source_workflow_summary_sha256": "b57823e3ea4f05c1165f375802482977a7e3d6a73ce12687075ed9d11ce23b17",
+  "scope": "Hashes identify private source records, not a claim of publicly verifiable hidden-test execution.",
+  "published_result_csv_sha256": "c2bf227464a3cfe9ac3c677bbffb0b41754f72a4d56478f14e552ce50d945666",
+  "csv_export_change": "CRLF normalized to LF; all column values unchanged."
+}

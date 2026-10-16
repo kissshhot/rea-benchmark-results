@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "preflight": {
+    "native": "PASS",
+    "apk": "PASS",
+    "dotnet": "PASS",
+    "wasm": "PASS",
+    "plugin": "PASS"
+  },
+  "accepted_seeds": 20,
+  "total_public_inputs": 80,
+  "total_hidden_inputs": 940,
+  "semantic_mutants_killed": 60,
+  "evidence_hashes_checked": 519
+}

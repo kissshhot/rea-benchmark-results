@@ -1,0 +1,208 @@
+{
+  "version": "v5-seedset-1",
+  "experiment_date": "2026-10-16",
+  "requested_model": "deepseek-v4-flash",
+  "returned_model_names": [
+    "deepseek-flash"
+  ],
+  "rea_version": "6.4.0",
+  "condition": "REL-mixed",
+  "formal_runs": 60,
+  "runs_per_setting": 20,
+  "repeats_per_seed_setting": 1,
+  "score_unit": "fraction_0_to_1",
+  "primary_metric": "mean of seed scores; each seed score is mean hidden-test-family accuracy",
+  "strict_definition": "all hidden inputs pass",
+  "groups": {
+    "B": {
+      "runs": 20,
+      "valid_runs": 20,
+      "macro": 0.5341501752216038,
+      "micro": 0.5308510638297872,
+      "strict_count": 7,
+      "actual_usage": {
+        "requests": 374,
+        "prompt_tokens": 6317863,
+        "completion_tokens": 86755,
+        "total_tokens": 6404618,
+        "cached_prompt_tokens": 5927296,
+        "uncached_prompt_tokens": 390567
+      },
+      "median_seconds": 129.44731656249996,
+      "sum_run_seconds": 2268.685894918,
+      "no_submission": 3,
+      "stop_reasons": {
+        "response_budget": 10,
+        "finish_tool": 9,
+        "model_finished": 1
+      },
+      "tool_errors": {
+        "query_target": 1
+      },
+      "REA_call_runs": 0
+    },
+    "REA": {
+      "runs": 20,
+      "valid_runs": 20,
+      "macro": 0.6346101319315605,
+      "micro": 0.6319148936170212,
+      "strict_count": 10,
+      "actual_usage": {
+        "requests": 359,
+        "prompt_tokens": 6683591,
+        "completion_tokens": 99114,
+        "total_tokens": 6782705,
+        "cached_prompt_tokens": 6274560,
+        "uncached_prompt_tokens": 409031
+      },
+      "median_seconds": 127.44031595799993,
+      "sum_run_seconds": 2321.637430625,
+      "no_submission": 2,
+      "stop_reasons": {
+        "finish_tool": 10,
+        "model_finished": 2,
+        "response_budget": 8
+      },
+      "tool_errors": {
+        "read_json": 35,
+        "query_target": 3
+      },
+      "REA_call_runs": 2
+    },
+    "REA_workflow": {
+      "runs": 20,
+      "valid_runs": 20,
+      "macro": 0.8568465264893836,
+      "micro": 0.851063829787234,
+      "strict_count": 12,
+      "actual_usage": {
+        "requests": 441,
+        "prompt_tokens": 13315305,
+        "completion_tokens": 251073,
+        "total_tokens": 13566378,
+        "cached_prompt_tokens": 12624000,
+        "uncached_prompt_tokens": 691305
+      },
+      "median_seconds": 153.907978646,
+      "sum_run_seconds": 3108.949577001,
+      "no_submission": 1,
+      "stop_reasons": {
+        "response_budget": 14,
+        "finish_tool": 3,
+        "completion_budget": 3
+      },
+      "tool_errors": {
+        "rea_analysis": 33,
+        "workflow_read": 8,
+        "record_evidence": 58,
+        "query_target": 36,
+        "write_solution": 1,
+        "read_json": 1
+      },
+      "REA_call_runs": 20
+    }
+  },
+  "tracks": {
+    "native": {
+      "B": 0.18804112554112556,
+      "REA": 0.4750631313131313,
+      "REA_workflow": 0.8912337662337663
+    },
+    "apk": {
+      "B": 0.9340986394557823,
+      "REA": 0.9757653061224489,
+      "REA_workflow": 0.9058956916099774
+    },
+    "dotnet": {
+      "B": 0.8125,
+      "REA": 1.0,
+      "REA_workflow": 0.8125
+    },
+    "wasm": {
+      "B": 0.0,
+      "REA": 0.0,
+      "REA_workflow": 0.75
+    },
+    "plugin": {
+      "B": 0.7361111111111112,
+      "REA": 0.7222222222222222,
+      "REA_workflow": 0.9246031746031745
+    }
+  },
+  "comparisons": {
+    "workflow_minus_B": {
+      "delta": 0.32269635126777985,
+      "seed_bootstrap_95ci": [
+        0.12523873943516797,
+        0.5341269841269841
+      ],
+      "track_bootstrap_95ci": [
+        0.026417233560090708,
+        0.618975468975469
+      ],
+      "win_tie_loss": [
+        9,
+        8,
+        3
+      ]
+    },
+    "workflow_minus_auto": {
+      "delta": 0.22223639455782312,
+      "seed_bootstrap_95ci": [
+        0.009916737528344674,
+        0.44557823129251706
+      ],
+      "track_bootstrap_95ci": [
+        -0.06247165532879817,
+        0.5192602040816328
+      ],
+      "win_tie_loss": [
+        7,
+        10,
+        3
+      ]
+    },
+    "auto_minus_B": {
+      "delta": 0.1004599567099567,
+      "seed_bootstrap_95ci": [
+        -0.04419349747474751,
+        0.25773809523809527
+      ],
+      "track_cluster_bootstrap_95ci": [
+        0.0027777777777777623,
+        0.20971320346320343
+      ],
+      "win_tie_loss": {
+        "REA_win": 5,
+        "tie": 13,
+        "REA_loss": 2
+      }
+    }
+  },
+  "workflow_adherence": {
+    "initial_or_model_REA_analysis": 20,
+    "model_additional_successful_REA_call": 12,
+    "evidence_read": 20,
+    "successful_fresh_behavior_query": 17,
+    "structurally_complete": 7,
+    "structurally_complete_and_manually_relevant": 4,
+    "denominator": 20
+  },
+  "budget_limits": {
+    "responses": 24,
+    "completion_tokens": 20000,
+    "completion_tokens_per_response": 6144,
+    "tool_calls": 96,
+    "analysis_calls": 16,
+    "target_inputs": 32,
+    "public_test_runs": 12,
+    "new_request_window_seconds": 900,
+    "input_tokens_hard_limit": null
+  },
+  "limits": [
+    "Development-set, single-sample, sequential batches; five shared infrastructures, not twenty independent upstream applications.",
+    "Workflow changes navigation, evidence recording and continuation/submission behavior; it is not an isolated REA treatment.",
+    "Equal ceilings do not match actual input-token or compute consumption.",
+    "The public pipeline export is not a byte-identical rerun of frozen v5 builders. Private target sources and evaluators are required for full reproduction."
+  ]
+}

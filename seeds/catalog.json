@@ -1,0 +1,545 @@
+{
+  "version": "v5-seedset-1",
+  "seeds": [
+    {
+      "seed_id": "apk_deeplink_history",
+      "title": "Deep-link route history and durable navigation",
+      "track": "apk",
+      "functional_group": "mobile-lifecycle",
+      "dependency": "Activity Intent data -> separate process Service -> Android Uri -> SharedPreferences",
+      "source_kind": "original_from_official_workflow",
+      "public": 4,
+      "hidden": 47,
+      "unique_inputs": 51,
+      "test_family_labels": 8,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://developer.android.com/training/app-links/create-deeplinks"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "apk_dynamic_shortcuts",
+      "title": "Dynamic launcher shortcut publication and durable catalog updates",
+      "track": "apk",
+      "functional_group": "mobile-lifecycle",
+      "dependency": "Activity -> worker process -> Android ShortcutManager Binder -> OS shortcut service",
+      "source_kind": "original_from_official_workflow",
+      "public": 4,
+      "hidden": 36,
+      "unique_inputs": 40,
+      "test_family_labels": 6,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://developer.android.com/develop/ui/compose/system/shortcuts/managing-shortcuts"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "apk_notification_groups",
+      "title": "Notification channels, replacement and group cancellation",
+      "track": "apk",
+      "functional_group": "mobile-lifecycle",
+      "dependency": "Activity -> worker process -> Android NotificationManager Binder -> OS channel/active notification store",
+      "source_kind": "original_from_official_workflow",
+      "public": 4,
+      "hidden": 36,
+      "unique_inputs": 40,
+      "test_family_labels": 6,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://developer.android.com/develop/ui/compose/notifications/channels"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "apk_share_inbox",
+      "title": "Shared content intake with durable MIME and content deduplication",
+      "track": "apk",
+      "functional_group": "protocol-content-import",
+      "dependency": "Activity ClipData -> Service -> ContentResolver Binder -> separate ContentProvider process -> SQLite transaction",
+      "source_kind": "original_from_official_workflow",
+      "public": 4,
+      "hidden": 36,
+      "unique_inputs": 40,
+      "test_family_labels": 6,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://developer.android.com/develop/ui/compose/sharing/receive"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "dotnet_backup_retention",
+      "title": "快照保留、共享内容块引用与回收计划",
+      "track": "dotnet",
+      "functional_group": "resource-policy",
+      "dependency": "快照清单→跨程序集pin/时间策略→按主机保留→块引用计数/GC计划",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://restic.readthedocs.io/en/stable/060_forget.html"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "dotnet_install_plan",
+      "title": "可选功能与版本约束下的部署计划",
+      "track": "dotnet",
+      "functional_group": "planning-interoperation",
+      "dependency": "根需求→跨程序集版本准入策略→回溯选择→依赖排序",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/nuget/concepts/dependency-resolution"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "dotnet_print_spool",
+      "title": "打印队列、页面选择与双面份数排版",
+      "track": "dotnet",
+      "functional_group": "document-editor",
+      "dependency": "队列入口→跨程序集页选择/份数/双面策略→资源中的空白页码→输出页单",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/dotnet/api/system.drawing.printing.printersettings"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "dotnet_profiles",
+      "title": "配置档案继承、作用域与删除标记",
+      "track": "dotnet",
+      "functional_group": "resource-policy",
+      "dependency": "入口→跨程序集键规范化/保留域规则→外部策略资源→多层配置解析",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/dotnet/core/extensions/configuration"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "native_calendar_freebusy",
+      "title": "Calendar recurrence exceptions and free windows",
+      "track": "native",
+      "functional_group": "planning-interoperation",
+      "dependency": "native CLI -> dlopen/dlsym -> separate native dylib -> calendar file I/O",
+      "source_kind": "original_standard_informed_application",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 7,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://www.rfc-editor.org/rfc/rfc5545.html"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "native_locale_catalog",
+      "title": "Offline locale catalog resolution",
+      "track": "native",
+      "functional_group": "resource-policy",
+      "dependency": "native CLI -> dlopen/dlsym -> separate native dylib -> catalog file",
+      "source_kind": "original_standard_informed_application",
+      "public": 4,
+      "hidden": 49,
+      "unique_inputs": 53,
+      "test_family_labels": 5,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://www.rfc-editor.org/rfc/rfc4647.html"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "native_midi_lifecycle",
+      "title": "MIDI pedal-aware voice lifecycle",
+      "track": "native",
+      "functional_group": "media-graphics",
+      "dependency": "native CLI -> dlopen/dlsym -> separate native dylib -> stateful event processing",
+      "source_kind": "original_standard_informed_application",
+      "public": 4,
+      "hidden": 47,
+      "unique_inputs": 51,
+      "test_family_labels": 11,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://midi.org/midi-1-0-control-change-messages"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "native_wav_editor",
+      "title": "PCM WAV trim, mix and gain export",
+      "track": "native",
+      "functional_group": "media-graphics",
+      "dependency": "native CLI -> dlopen/dlsym -> separate native dylib -> binary file I/O",
+      "source_kind": "original_standard_informed_application",
+      "public": 4,
+      "hidden": 45,
+      "unique_inputs": 49,
+      "test_family_labels": 7,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "plugin_diagnostics",
+      "title": "Diagnostic quick-fix replay",
+      "track": "plugin",
+      "functional_group": "document-editor",
+      "dependency": "DiagnosticCollection → CodeAction provider → WorkspaceEdit → refreshed diagnostics",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 52,
+      "unique_inputs": 56,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://code.visualstudio.com/api/language-extensions/programmatic-language-features"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "plugin_discovery",
+      "title": "Workspace resource discovery",
+      "track": "plugin",
+      "functional_group": "resource-policy",
+      "dependency": "findFiles → workspace.fs → policy/hash module → selection manifest",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 52,
+      "unique_inputs": 56,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://code.visualstudio.com/api/references/vscode-api#workspace.findFiles"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "plugin_notebook",
+      "title": "Cell-book recovery and export",
+      "track": "plugin",
+      "functional_group": "document-editor",
+      "dependency": "notebook provider → normalization module → NotebookEdit → serializer/file",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 51,
+      "unique_inputs": 55,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://code.visualstudio.com/api/extension-guides/notebook"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "plugin_table",
+      "title": "Delimited table import",
+      "track": "plugin",
+      "functional_group": "document-editor",
+      "dependency": "command → TextDocument → parser/renderer → WorkspaceEdit",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 57,
+      "unique_inputs": 61,
+      "test_family_labels": 6,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://www.rfc-editor.org/rfc/rfc4180"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "wasm_atlas",
+      "title": "字形图集增量分配与缓存释放",
+      "track": "wasm",
+      "functional_group": "media-graphics",
+      "dependency": "命令工作文件→WASM缓存/shelf分配→宿主字形度量→多页坐标",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://freetype.org/freetype2/docs/glyphs/glyphs-3.html"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "wasm_palette",
+      "title": "索引图瓦片提取、透明色与背景合成",
+      "track": "wasm",
+      "functional_group": "media-graphics",
+      "dependency": "索引图文件→WASM坐标/合成内核→宿主RGBA调色板→瓦片导出",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://www.w3.org/TR/png/"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "wasm_subtitle",
+      "title": "剪辑时间轴字幕切分与冲突消解",
+      "track": "wasm",
+      "functional_group": "media-graphics",
+      "dependency": "字幕工作文件→WASM区间映射/排序→宿主剪辑表→导出时间片",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://www.w3.org/TR/webvtt1/"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    },
+    {
+      "seed_id": "wasm_telemetry",
+      "title": "串口遥测导入与损坏帧恢复",
+      "track": "wasm",
+      "functional_group": "protocol-content-import",
+      "dependency": "分块字节流→WASM持久解析状态→宿主标定表→事件记录",
+      "source_kind": "original",
+      "public": 4,
+      "hidden": 48,
+      "unique_inputs": 52,
+      "test_family_labels": 4,
+      "semantic_mutants": 3,
+      "status": "PASS",
+      "source_urls": [
+        "https://www.rfc-editor.org/info/rfc1055/"
+      ],
+      "perturbations": [
+        "N",
+        "S",
+        "D"
+      ],
+      "lineage": {
+        "original_task": true,
+        "mined_upstream_application": false,
+        "old_six_reused": false
+      }
+    }
+  ]
+}
